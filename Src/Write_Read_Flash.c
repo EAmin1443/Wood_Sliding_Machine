@@ -14,7 +14,7 @@ void write_data(int data_height, int data_angle)
 	HAL_StatusTypeDef check = HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, address_height, data_height);
 	check = HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, address_angle, data_angle);
 	while(check!=HAL_OK);
-	HAL_Delay(10);
+	//HAL_Delay(10);
 	HAL_FLASH_Lock();
 }
 
