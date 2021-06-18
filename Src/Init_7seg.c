@@ -22,7 +22,7 @@ void display_init(void)
 	
 	// Delay_function_with_a_for
 	static int iii;
-	for (iii=0;iii<10000;iii++);
+	for (iii=0;iii<1000000;iii++);
 		
 	//******Display_Test(off)******//
 //1.Bring slave low
