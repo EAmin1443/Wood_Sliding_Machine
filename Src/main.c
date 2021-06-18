@@ -57,7 +57,7 @@ uint32_t address_angle=0x080E0002;
 signed int IT_counter_angle;
 signed int IT_counter_hight;
 int saving_index=0;
-int saving_loop=50000;
+int saving_loop=70000;
 int saving_flage=0;
 
 
