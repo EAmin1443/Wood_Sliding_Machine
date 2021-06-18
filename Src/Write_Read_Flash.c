@@ -4,6 +4,9 @@
 
 void write_data(int data_height, int data_angle)
 {
+  HAL_NVIC_DisableIRQ(EXTI1_IRQn);
+  HAL_NVIC_DisableIRQ(EXTI3_IRQn);
+
 	static char sector=11;
 	extern uint32_t address_height;
 	extern uint32_t address_angle;
@@ -14,12 +17,18 @@ void write_data(int data_height, int data_angle)
 	HAL_StatusTypeDef check = HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, address_height, data_height);
 	check = HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, address_angle, data_angle);
 	while(check!=HAL_OK);
-	//HAL_Delay(10);
+
 	HAL_FLASH_Lock();
+	
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
+  HAL_NVIC_EnableIRQ(EXTI3_IRQn);
 }
 
 void read_data(void)
 {
+  HAL_NVIC_DisableIRQ(EXTI1_IRQn);
+  HAL_NVIC_DisableIRQ(EXTI3_IRQn);
+
 	extern signed int IT_counter_angle;
 	extern signed int IT_counter_hight;
 	extern uint32_t address_height;
@@ -32,5 +41,9 @@ void read_data(void)
 		IT_counter_hight=-((IT_counter_hight^0xFFFF)+1);
 	if (IT_counter_angle>0xFF00)
 		IT_counter_angle=-((IT_counter_angle^0xFFFF)+1);
+
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
+  HAL_NVIC_EnableIRQ(EXTI3_IRQn);
+
 }
 

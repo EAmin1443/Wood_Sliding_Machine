@@ -20,8 +20,10 @@ void display_init(void)
 //3.Bring slave select high
 	HAL_GPIO_WritePin(GPIOE, GPIO_PIN_3, GPIO_PIN_SET);
 	
-	HAL_Delay(500);
-	
+	// Delay_function_with_a_for
+	static int iii;
+	for (iii=0;iii<10000;iii++);
+		
 	//******Display_Test(off)******//
 //1.Bring slave low
 	HAL_GPIO_WritePin(GPIOE, GPIO_PIN_3, GPIO_PIN_RESET);
