@@ -17,14 +17,14 @@ void set_origin(void)
 	{
 			IT_counter_hight=0;
 			write_data(IT_counter_hight, IT_counter_angle);
-			display_number(IT_counter_angle , IT_counter_hight);
+			display_number(IT_counter_hight, IT_counter_angle);
 	}
 	
 	while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_7)==0)
 	{
 			IT_counter_angle=0;
 			write_data(IT_counter_hight, IT_counter_angle);
-			display_number(IT_counter_angle , IT_counter_hight);
+			display_number(IT_counter_hight , IT_counter_angle);
 	}
 }
 }
