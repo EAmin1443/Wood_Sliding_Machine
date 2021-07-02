@@ -235,11 +235,11 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 	
 	/* EXTI interrupt init (Interupt)*/
-  HAL_NVIC_SetPriority(EXTI1_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI1_IRQn, 1, 1);
   HAL_NVIC_EnableIRQ(EXTI1_IRQn);
   //HAL_NVIC_SetPriority(EXTI2_IRQn, 0, 0);
   //HAL_NVIC_EnableIRQ(EXTI2_IRQn);
-  HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI3_IRQn, 2, 2);
   HAL_NVIC_EnableIRQ(EXTI3_IRQn);
   //HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
   //HAL_NVIC_EnableIRQ(EXTI4_IRQn);
