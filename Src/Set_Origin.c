@@ -8,7 +8,7 @@ void set_origin(void)
 {
 	extern signed int IT_counter_angle;
 	extern signed int IT_counter_hight;
-	//static int counter_loop=0;
+	// int counter_loop=0;
 	
 	while (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2)==0)
 {

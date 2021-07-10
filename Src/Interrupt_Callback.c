@@ -9,14 +9,14 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	extern signed int IT_counter_hight;
 	extern int saving_index;
 	extern int saving_flage;
-	static char angle_plus_key;
-	static char angle_minus_key;
-	static char angle_minus_index;
-	static char angle_plus_index;
-	static char height_plus_key;
-	static char height_minus_key;
-	static char height_plus_index;
-	static char height_minus_index;
+	 char angle_plus_key;
+	 char angle_minus_key;
+	 char angle_minus_index;
+	 char angle_plus_index;
+	 char height_plus_key;
+	 char height_minus_key;
+	 char height_plus_index;
+	 char height_minus_index;
 
 	if(GPIO_Pin == GPIO_PIN_1)
 	{

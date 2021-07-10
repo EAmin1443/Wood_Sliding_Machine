@@ -7,7 +7,7 @@ void write_data(int data_height, int data_angle)
   HAL_NVIC_DisableIRQ(EXTI1_IRQn);
   HAL_NVIC_DisableIRQ(EXTI3_IRQn);
 
-	static char sector=11;
+	 char sector=11;
 	extern uint32_t address_height;
 	extern uint32_t address_angle;
 	HAL_FLASH_Unlock();

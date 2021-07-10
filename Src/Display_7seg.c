@@ -9,12 +9,12 @@ void display_number( signed int left_number, signed int right_number)
 	#define Data spiTxBuf[0]
 	#define Address spiTxBuf[1]
 	
-	static char ones;
-	static char tens;
-	static char hundreds;
-	static int digiting;
-//	static char angle_minus_flage=0;
-//	static char height_minus_flage=0;
+	 char ones;
+	 char tens;
+	 char hundreds;
+	 int digiting;
+//	 char angle_minus_flage=0;
+//	 char height_minus_flage=0;
 
 	/* limiting_3_digits */
 	if (right_number<0)

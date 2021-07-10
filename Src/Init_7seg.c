@@ -3,7 +3,7 @@
 
 void display_init(void)
 {
-	static uint8_t spiTxBuf_init[2];
+	 uint8_t spiTxBuf_init[2];
 	#define Data spiTxBuf_init[0]
 	#define Address spiTxBuf_init[1]
 	extern SPI_HandleTypeDef hspi1;
@@ -21,7 +21,7 @@ void display_init(void)
 	HAL_GPIO_WritePin(GPIOE, GPIO_PIN_3, GPIO_PIN_SET);
 	
 	// Delay_function_with_a_for
-	static int iii;
+	 int iii;
 	for (iii=0;iii<1000000;iii++);
 		
 	//******Display_Test(off)******//
